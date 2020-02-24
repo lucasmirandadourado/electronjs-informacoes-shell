@@ -1,5 +1,6 @@
 const { remote } = require('electron')
 const shell = require("shelljs");
+const fs = require('fs');
 
 function ip() {
     let nodePath = (shell.which('node').toString());
@@ -22,3 +23,9 @@ document.getElementById('exec_ip').addEventListener('click', function (e) {
 document.getElementById('exec_vagrant').addEventListener('click', function (e) {
     vagrant();
 });
+
+document.getElementById('configurar').addEventListener('click', function(e){
+    e.preventDefault();
+    // TODO: Falta fazer a parte de edição
+    console.log('EDITAR O ARQUIVO')
+})
