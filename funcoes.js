@@ -4,15 +4,21 @@ const shell = require("shelljs");
 function ip() {
     let nodePath = (shell.which('node').toString());
     shell.config.execPath = nodePath;
-    shell.echo("Oi");
-    var version = shell.exec('ipconfig', {silent:true}).stdout;
-    console.log(`ip: ${version}`);
-
+    let result = shell.exec('ipconfig', { silent: true, encoding: 'utf8' }).stdout;
+    document.getElementById('result').value = `id: ${result}`;
 }
 
-document.getElementById('executar').addEventListener('click', function (e) {
-    console.log('OIiii');
+function vagrant() {
+    let nodePath = (shell.which('node').toString());
+    shell.config.execPath = nodePath;
+    let result = shell.exec('vagrant -v', { silent: true, encoding: 'utf8' }).stdout;
+    document.getElementById('result').value = `Versão: ${result}`;
+}
+
+document.getElementById('exec_ip').addEventListener('click', function (e) {
     ip();
 });
 
-
+document.getElementById('exec_vagrant').addEventListener('click', function (e) {
+    vagrant();
+});

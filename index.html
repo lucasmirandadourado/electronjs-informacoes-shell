@@ -10,13 +10,16 @@
 
 <body>
     <h1>Shellzinho</h1>
-    <div>
+    <div id="form">
         <p>Sistema Shellzinho</p>
 
-        <input type="text" name="shell" id="shell">
-        <button id="executar">Executar</button>
+        <button id="exec_ip">IP</button>
+        <button id="exec_vagrant">VAGRANT</button>
         <br>
-        <textarea name="result" id="result" cols="30" rows="10"></textarea>
+        <div id="log">
+            <label for="log">Log</label>
+            <textarea name="result" id="result" cols="30" rows="10"></textarea>
+        </div>
     </div>
 
     <script src="funcoes.js"></script>

@@ -1,0 +1,45 @@
+body {
+    background-color: #fafafa;
+    margin: 0 auto;
+    width: 90%;
+}
+
+#form {
+
+}
+
+input#shell {
+    border-radius: 4px;
+    height: 24px;
+    background-color: #f9f3f300;
+    border: 1px solid #aaa;
+}
+
+button#executar {
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    height: 29px;
+    border: 1px solid #28a745;
+}
+
+textarea#result {
+    flex: 0;
+    min-width: 500px;
+    margin: 15px 0px;
+}
+
+div#log {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    color: white;
+    background: #1ec12aaa;
+    border: 1px solid #1ec12aaa;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
